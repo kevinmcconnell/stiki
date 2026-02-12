@@ -1,0 +1,9 @@
+{{define "title"}}{{.Title}} — Stiki{{end}}
+
+{{define "content"}}
+<h2 class="page-title">{{.Title}}</h2>
+<div class="page-body">{{.Body}}</div>
+<div class="actions">
+  <a href="/pages/{{.Title}}/edit">Edit this page</a>
+</div>
+{{end}}

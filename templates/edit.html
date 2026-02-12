@@ -1,0 +1,12 @@
+{{define "title"}}Editing {{.Title}} — Stiki{{end}}
+
+{{define "content"}}
+<h2 class="page-title">Editing {{.Title}}</h2>
+<form class="edit-form" method="POST" action="/pages/{{.Title}}">
+  <textarea name="body">{{.Body}}</textarea>
+  <div class="actions">
+    <button type="submit">Save</button>
+    <a href="/pages/{{.Title}}">Cancel</a>
+  </div>
+</form>
+{{end}}
