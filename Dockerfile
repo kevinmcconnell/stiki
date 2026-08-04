@@ -5,7 +5,7 @@ WORKDIR /src
 COPY . .
 RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o /stiki .
 
-FROM scratch
+FROM ubuntu
 COPY --from=build /stiki /stiki
 COPY templates/ /templates/
 COPY public/ /public/
